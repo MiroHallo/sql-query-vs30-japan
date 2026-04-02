@@ -2,7 +2,7 @@
 SQL Query Tool for Vs30 for seismic analysis in Japan (derived from J-SHIS)
 ***************************************
 
-  This research tool is intended for the reading and querying the SQLite 
+  This tool is intended for the reading and querying the SQLite 
 database with a processed subset of the J-SHIS seismic hazard data (National
 Research Institute for Earth Science and Disaster Resilience, NIED). It is 
 specifically designed as a computational tool for high-performance spatial 
@@ -18,12 +18,12 @@ Zenodo. [https://doi.org/10.5281/zenodo.19379171](https://doi.org/10.5281/zenodo
 2 TECHNICAL IMPLEMENTATION
 ===================
 
-SQL (SQLite), Python
+Python, SQL (SQLite)
 
-*   **Zero-Configuration:** The script automatically resolves the **DOI**, downloads the latest SQLite database from Zenodo, and stores it locally in the script directory.
-*   **High-Speed SQL Queries:** Uses an optimized **SQLite** container with spatial indexing for rapid coordinate-based lookups (designed for large portfolios).
+*   **Zero-Configuration:** The script automatically resolves the DOI, downloads the latest SQLite database from Zenodo, and stores it locally in the script directory.
+*   **High-Speed SQL Queries:** Uses an optimized SQLite container with spatial indexing for rapid coordinate-based lookups (designed for large portfolios).
 *   **Geospatial Precision:** Performs automatic **UTM projection** estimation to calculate exact metric distances (km) between targets and grid points across all Japanese islands.
-*   **Batch Processing:** Supports automated processing of target locations from text files (`#` comments supported).
+*   **Batch Processing:** Supports automated processing of target locations from text files.
 *   **Professional Output:** Generates clean, fixed-width formatted reports (TXT) with full metadata and provenance tracking.
 
 The official software version is archived on Zenodo:
