@@ -1,4 +1,4 @@
-# SQL Query Tool for Vs30 data (Japan)
+# SQL Query Tool for Vs30 data in Japan
 SQL Query Tool for Vs30 for seismic analysis in Japan (derived from J-SHIS)
 ***************************************
 
@@ -12,19 +12,19 @@ queries in seismic hazard and risk analysis and site effect modeling.
 ===================
 
   Hallo, M. (2026). Research Dataset: Optimized Site Parameters (Vs30) 
-for Seismic Analysis in Japan (derived from J-SHIS) (v1.0) [Data set]. 
+for Seismic Analysis in Japan (derived from J-SHIS) [Data set]. 
 Zenodo. [https://doi.org/10.5281/zenodo.19379171](https://doi.org/10.5281/zenodo.19379171)
 
 2 TECHNICAL IMPLEMENTATION
 ===================
 
-Python, SQL (SQLite)
+Python 3, SQLite, SQL engine, Automatic database download, Coordinate-based indexing
 
-*   **Zero-Configuration:** The script automatically resolves the DOI, downloads the latest SQLite database from Zenodo, and stores it locally in the script directory.
-*   **High-Speed SQL Queries:** Uses an optimized SQLite container with spatial indexing for rapid coordinate-based lookups (designed for large portfolios).
-*   **Geospatial Precision:** Performs automatic UTM projection estimation to calculate exact metric distances (km) between targets and grid points across all Japanese islands.
+*   **Zero-Configuration:** The script automatically resolves the DOI, downloads the latest SQLite database from Zenodo, and stores it locally.
+*   **High-Speed SQL Queries:** Uses an optimized SQLite container with spatial indexing for rapid coordinate-based lookups.
+*   **Geospatial Precision:** Performs automatic UTM projection estimation to calculate exact metric distances (km) between targets and grid points.
 *   **Batch Processing:** Supports automated processing of target locations from text files.
-*   **Professional Output:** Generates clean, fixed-width formatted reports (TXT) with full metadata and provenance tracking.
+*   **Professional Output:** Generates clean, fixed-width formatted reports with metadata and provenance tracking.
 
 The official software version is archived on Zenodo:
 
@@ -35,15 +35,16 @@ The official software version is archived on Zenodo:
 
   a) "jshis_sqlite_query.py" - Python script
   
-  b) "example_targets.txt" - Example of input text file with target locations 
+  b) "example_targets.txt" - Example of input text file with target locations
   
-  c) "requirements.txt" - pip requirements file
+  c) "requirements.txt" - pip requirements file for instalation of dependencies
 
 
 4 REQUIREMENTS
 ===================
 
-  Python: Version 3.12.3, "Pandas", "Geopandas", "SQLAlchemy", "Requests", "shapely"
+  Python: Version 3.12.3 or higher
+  Libraries: pandas, geopandas, sqlalchemy, requests, shapely
   
   Install dependencies via pip:
 
@@ -54,9 +55,9 @@ pip install -r requirements.txt
 5 USAGE
 ===================
 
-  1. Prepare your 'example_targets.txt' (longitude latitude pairs)
-  2. Run the tool: python jshis_sqlite_query.py
-  3. Check 'example_results_vs30.txt' for the output
+  1. Prepare your 'example_targets.txt' file (longitude latitude pairs)
+  2. Run the tool: 'python jshis_sqlite_query.py'
+  3. Check 'example_results_vs30.txt' for the output Vs30
 
 6 COPYRIGHT
 ===================
