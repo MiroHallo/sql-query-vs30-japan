@@ -1,6 +1,6 @@
 {
   "metadata": {
-  "title": "SQL Query Tool for Vs30 data (Japan)",
+  "title": "SQL Query Tool for Vs30 data in Japan",
   "description": "This research tool is intended for the reading and querying the SQLite database with a processed subset of the J-SHIS seismic hazard data (NIED). It is specifically designed as a computational tool for high-performance spatial queries in seismic hazard and risk analysis and site effect modeling.",
   "creators": [
     {
@@ -20,7 +20,7 @@
       "resource_type": "dataset"
     }
   ],
-  "version": "v1.0",
+  "version": "v1.1",
   "publication_date": "2026-04-02",
   "language": "eng",
   "upload_type": "software"
