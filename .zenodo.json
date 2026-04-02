@@ -10,7 +10,7 @@
     }
   ],
   "access_right": "open",
-  "license": "GPL-3.0-or-later",
+  "license": "gpl-3.0",
   "keywords": ["Seismic Hazard", "Vs30", "Seismology", "Site Effects", "Japan", "Python", "SQL", "SQLite"],
   "related_identifiers": [
     {
@@ -20,8 +20,6 @@
       "resource_type": "dataset"
     }
   ],
-  "version": "v1.1",
-  "publication_date": "2026-04-02",
   "language": "eng",
   "upload_type": "software"
   }
