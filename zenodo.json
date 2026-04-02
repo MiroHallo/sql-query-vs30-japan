@@ -16,7 +16,7 @@
     {
       "scheme": "doi",
       "identifier": "10.5281/zenodo.19379171",
-      "relation": "isSupplementTo"
+      "relation": "isSupplementTo",
       "resource_type": "dataset"
     }
   ],
