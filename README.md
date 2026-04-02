@@ -22,7 +22,7 @@ Python, SQL (SQLite)
 
 *   **Zero-Configuration:** The script automatically resolves the DOI, downloads the latest SQLite database from Zenodo, and stores it locally in the script directory.
 *   **High-Speed SQL Queries:** Uses an optimized SQLite container with spatial indexing for rapid coordinate-based lookups (designed for large portfolios).
-*   **Geospatial Precision:** Performs automatic **UTM projection** estimation to calculate exact metric distances (km) between targets and grid points across all Japanese islands.
+*   **Geospatial Precision:** Performs automatic UTM projection estimation to calculate exact metric distances (km) between targets and grid points across all Japanese islands.
 *   **Batch Processing:** Supports automated processing of target locations from text files.
 *   **Professional Output:** Generates clean, fixed-width formatted reports (TXT) with full metadata and provenance tracking.
 
