@@ -28,7 +28,7 @@ SQL (SQLite), Python
 
 The official software version is archived on Zenodo:
 
-
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19386410.svg)](https://doi.org/10.5281/zenodo.19386410)
 
 3 PACKAGE CONTENT
 ===================
