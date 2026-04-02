@@ -49,6 +49,7 @@ The official software version is archived on Zenodo:
 
 ```bash
 pip install -r requirements.txt
+```
 
 5 USAGE
 ===================
