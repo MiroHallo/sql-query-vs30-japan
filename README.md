@@ -44,6 +44,7 @@ The official software version is archived on Zenodo:
 ===================
 
   Python: Version 3.12.3 or higher
+  
   Libraries: pandas, geopandas, sqlalchemy, requests, shapely
   
   Install dependencies via pip:
