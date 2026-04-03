@@ -45,7 +45,7 @@ from shapely.geometry import Point
 class InputClass:
     ref_lon: float
     ref_lat: float
-    delta: float = 0.05
+    delta: float = 0.02
 
 @dataclass
 class Vs30Class:
@@ -67,7 +67,7 @@ OUTPUT_FILE = 'example_results_vs30.txt'
 DB_FILE = 'Vs30_Japan_JSHIS_derived.sqlite'
 
 # Location search window [deg]
-DELTA = 0.05
+DELTA = 0.02
 
 # =============================================================================
 # FUNCTIONS
@@ -76,12 +76,13 @@ DELTA = 0.05
 # Initialize SQL (SQLite) engine
 def init_sql_engine(db_file: str) -> Engine:
     """
-    Initializes SQL (SQLite) engine in read-only mode
+    Initialize SQL (SQLite) engine in read-only mode.
+
     Args:
-        db_file (str): Text string containing filename of the SQLite database
+        db_file (str): Text string containing filename of the SQLite database.
     Returns:
-        engine (Engine): Active SQLAlchemy engine instance
-        None: If SQLite database file not found
+        engine (Engine): Active SQLAlchemy engine instance.
+        None: If SQLite database file not found.
     """
     # Check if the SQLite database file exists
     full_db_path = Path(__file__).resolve().parent / db_file
@@ -98,9 +99,10 @@ def init_sql_engine(db_file: str) -> Engine:
 # Get SQL database info
 def get_db_info(engine: Engine):
     """
-    Prints database information from the db_info table
+    Print database information from the db_info table.
+
     Args:
-        engine (Engine): Active SQLAlchemy engine instance
+        engine (Engine): Active SQLAlchemy engine instance.
     Returns: 
         None
     """
@@ -117,14 +119,14 @@ def get_db_info(engine: Engine):
 # Download SQLite database
 def download_database(db_file: str):
     """
-    Checks if the SQLite database exists. If not, downloads it from Zenodo repository
-    DOI: 10.5281/zenodo.19379171
+    Download SQLite database from the Zenodo repository DOI:10.5281/zenodo.19379171.
+    
     Args:
-        db_file (str): Text string containing filename of the SQLite database
+        db_file (str): Text string containing filename of the SQLite database.
     Returns:
         None
     """
-    # Zenodo DOI for the SQLite database
+    # DOI for the SQLite database
     doi = "10.5281/zenodo.19379171"
 
     # Check if the SQLite database file exists
@@ -133,25 +135,27 @@ def download_database(db_file: str):
         return
     
     try:
-        r_doi = requests.get(f"https://doi.org/{doi}", allow_redirects=True, timeout=60)
-        r_doi.raise_for_status()
-        record_id = r_doi.url.rstrip('/').split('/')[-1]
-        download_url = f"https://zenodo.org/records/{record_id}/files/{db_file}?download=1"
+        rdoi = requests.get(f"https://doi.org/{doi}", allow_redirects=True, timeout=60)
+        rdoi.raise_for_status()
+        record_id = rdoi.url.rstrip('/').split('/')[-1]
+        down_url = f"https://zenodo.org/records/{record_id}/files/{db_file}?download=1"
         print(f"[*] Downloading from Zenodo (ID: {record_id}). Please wait...")
-        with requests.get(download_url, stream=True) as r_down:
+        with requests.get(down_url, stream=True) as r_down:
             r_down.raise_for_status()
             # Get total size
             total_size = int(r_down.headers.get('content-length', 0))
             downloaded = 0
             # Download
             with open(full_db_path, 'wb') as f:
-                for chunk in r_down.iter_content(chunk_size=1024*1024): # po 1 MB
+                for chunk in r_down.iter_content(chunk_size=1024*1024): # 1 MB
                     if chunk:
                         f.write(chunk)
                         downloaded += len(chunk)
                         if total_size > 0:
-                            done = int(50 * downloaded / total_size)
-                            print(f"\r    Progress: [{'=' * done}{' ' * (50-done)}] {downloaded/1024/1024:.1f} MB", end="")
+                            done = int(50 * downloaded / total_size)                          
+                            print(f"\r    Progress: [{'=' * done}{' ' * (50-done)}] "
+                                f"{downloaded/1024/1024:.1f} MB", end="")
+        
         print(f"\n[+] Download complete: {full_db_path.absolute()}")
         
     except Exception as e:
@@ -164,13 +168,14 @@ def download_database(db_file: str):
 # Get Vs30 from SQL database
 def get_vs30(input_params: dict, engine: Engine) -> Vs30Class:
     """
-    Extracts Vs30 data from SQL database
+    Extract Vs30 data from SQL database.
+
     Args:
-        input_params (dict): Dictionary containing 'ref_lon', 'ref_lat', 'delta'
-        engine (Engine): Active SQLAlchemy engine instance
+        input_params (dict): Dictionary containing 'ref_lon', 'ref_lat', 'delta'.
+        engine (Engine): Active SQLAlchemy engine instance.
     Returns: 
-        Vs30Class: Object containing 'lon', 'lat', 'vs30', 'af', 'dist_km'
-        None: If no data is found in the search window
+        Vs30Class: Object containing 'lon', 'lat', 'vs30', 'af', 'dist_km'.
+        None: If no data is found in the search window.
     """
     # Creates input object
     inp =  InputClass(**input_params)
@@ -216,7 +221,7 @@ def get_vs30(input_params: dict, engine: Engine) -> Vs30Class:
     target_pt = target_gs.to_crs(utm_crs).iloc[0]
 
     # Calculate distances (kilometers)
-    geo_data_metric['dist_km'] = geo_data_metric.geometry.distance(target_pt)/1000.0
+    geo_data_metric['dist_km'] = geo_data_metric.geometry.distance(target_pt) / 1000.0
 
     # Find the closest
     closest_idx = geo_data_metric['dist_km'].idxmin()
@@ -237,10 +242,13 @@ def get_vs30(input_params: dict, engine: Engine) -> Vs30Class:
 # Main function
 def main():
     """
-    Main function for standalone execution
-    Initialize SQL engine using the global DB_FILE (SQLite database).
-    Reads target locations from the global INPUT_FILE and extraxt Vs30 values.
-    Results are saved into the global OUTPUT_FILE
+    Main function for standalone execution.
+
+    - Download SQLite database DB_FILE (if not exists).
+    - Initialize SQL engine.
+    - Read target locations from the INPUT_FILE.
+    - Extract Vs30 values.
+    - Save results into the OUTPUT_FILE.
     """
     print("-" * 50)
 
@@ -252,7 +260,7 @@ def main():
     print("[*] Initialize SQL engine")
     engine = init_sql_engine(DB_FILE)
     if not engine:
-        print("[!] SQL engine could not be initialized")
+        print("[!] SQL engine could not be initialized!")
         return
     
     print("[*] Database Info")
