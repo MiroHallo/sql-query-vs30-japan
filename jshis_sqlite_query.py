@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 # =============================================================================
 # SQL DATA LOADER AND QUERY TOOL FOR VS30
 # 
