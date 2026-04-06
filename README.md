@@ -12,7 +12,7 @@ queries in seismic hazard and risk analysis and site effect modeling.
 ===================
 
   Hallo, M. (2026). Research Dataset: Optimized Site Parameters (Vs30) 
-for Seismic Analysis in Japan (derived from J-SHIS) [Data set]. 
+for Seismic Hazard Analysis in Japan (derived from J-SHIS) [Data set]. 
 Zenodo. [https://doi.org/10.5281/zenodo.19379171](https://doi.org/10.5281/zenodo.19379171)
 
 2 TECHNICAL IMPLEMENTATION
