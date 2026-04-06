@@ -1,5 +1,5 @@
 # SQL Query Tool for Vs30 data in Japan
-SQL Query Tool for Vs30 for seismic analysis in Japan (derived from J-SHIS)
+SQL Query Tool for Vs30 for seismic hazard analysis in Japan (derived from J-SHIS)
 ***************************************
 
   This tool is intended for the reading and querying the SQLite 
