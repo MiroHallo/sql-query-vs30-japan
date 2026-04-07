@@ -43,7 +43,7 @@ The official software version is archived on Zenodo:
 4 REQUIREMENTS
 ===================
 
-  Python: Version 3.12.3 or higher
+  Python: Version 3.12 or higher
   
   Libraries: pandas, geopandas, sqlalchemy, requests, shapely
   
