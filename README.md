@@ -33,12 +33,9 @@ The official software version is archived on Zenodo:
 3 PACKAGE CONTENT
 ===================
 
-  a) "jshis_sqlite_query.py" - Python script
-  
-  b) "example_targets.txt" - Example of input text file with target locations
-  
-  c) "requirements.txt" - pip requirements file for instalation of dependencies
-
+  1. `jshis_sqlite_query.py` - Python script
+  2. `example_targets.txt` - Example of input text file with target locations
+  3. `requirements.txt` - pip requirements file for instalation of dependencies
 
 4 REQUIREMENTS
 ===================
@@ -56,9 +53,9 @@ pip install -r requirements.txt
 5 USAGE
 ===================
 
-  1. Prepare your 'example_targets.txt' file (longitude latitude pairs)
-  2. Run the tool: 'python jshis_sqlite_query.py'
-  3. Check 'example_results_vs30.txt' for the output Vs30
+  1. Prepare your `example_targets.txt` input file (longitude-latitude pairs)
+  2. Run the tool: `python jshis_sqlite_query.py`
+  3. Check `example_results_vs30.txt` for the output Vs30
 
 6 EXAMPLE OUTPUT
 ===================
