@@ -60,7 +60,7 @@ pip install -r requirements.txt
 6 EXAMPLE OUTPUT
 ===================
 
-This tool extracts site-specific Vs30 for a set of target Longitude-Latitude 
+This tool extracts site-specific V<sub>S30</sub> for a set of target Longitude-Latitude 
 pairs from a SQLite database for Japan. Results are automatically saved to a 
 formatted text file.
 ```text
