@@ -1,5 +1,5 @@
-# SQL Query Tool for Vs30 data in Japan
-SQL Query Tool for Vs30 for seismic hazard analysis in Japan (derived from J-SHIS)
+# SQL Query Tool for V<sub>S30</sub> data in Japan
+SQL Query Tool for V<sub>S30</sub> for seismic hazard analysis in Japan (derived from J-SHIS)
 ***************************************
 
   This tool is intended for the reading and querying the SQLite 
@@ -55,7 +55,7 @@ pip install -r requirements.txt
 
   1. Prepare your `example_targets.txt` input file (longitude-latitude pairs)
   2. Run the tool: `python jshis_sqlite_query.py`
-  3. Check `example_results_vs30.txt` for the output Vs30
+  3. Check `example_results_vs30.txt` for the output V<sub>S30</sub>
 
 6 EXAMPLE OUTPUT
 ===================
