@@ -18,6 +18,8 @@ Zenodo. [https://doi.org/10.5281/zenodo.19379171](https://doi.org/10.5281/zenodo
 2 TECHNICAL IMPLEMENTATION
 ===================
 
+[![PEP8](https://img.shields.io/badge/code%20style-pep8-orange.svg)](https://www.python.org/dev/peps/pep-0008/)
+
 Python 3, SQLite, SQL engine, Automatic database download, Coordinate-based indexing
 
 *   **Zero-Configuration:** The script automatically resolves the DOI, downloads the latest SQLite database from Zenodo, and stores it locally.
