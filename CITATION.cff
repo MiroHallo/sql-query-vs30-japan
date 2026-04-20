@@ -1,0 +1,36 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+type: software
+authors:
+  - family-names: "Hallo"
+    given-names: "Miroslav"
+    orcid: "https://orcid.org/0000-0001-5865-7767"
+title: "SQL Query Tool for Vs30 data in Japan"
+abstract: "This research tool is intended for the reading and querying the SQLite database with a processed subset of the J-SHIS seismic hazard data (NIED). It is specifically designed as a computational tool for high-performance spatial queries in seismic hazard and risk analysis and site effect modeling."
+version: "1.2.3"
+doi: "10.5281/zenodo.19386410"
+date-released: "2026-04-20"
+license: GPL-3.0-or-later
+repository-code: "https://github.com/MiroHallo/sql-query-vs30-japan"
+keywords:
+  - "seismic hazard"
+  - "vs30"
+  - "seismology"
+  - "site effects"
+  - "SQL"
+  - "SQLite"
+  - "Japan"
+
+# -------------------------------------------------------------------
+# Other citations
+references:
+  - type: data
+    authors:
+      - family-names: "Hallo"
+        given-names: "Miroslav"
+        orcid: "https://orcid.org/0000-0001-5865-7767"
+    title: "Research Dataset: Optimized Site Parameters Vs30 for Seismic Hazard Analysis in Japan (derived from J-SHIS)"
+    year: 2026
+    publisher:
+      name: "Zenodo"
+    doi: "10.5281/zenodo.19379171"

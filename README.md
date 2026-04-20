@@ -1,22 +1,20 @@
 # SQL Query Tool for V<sub>S30</sub> data in Japan
-SQL Query Tool for V<sub>S30</sub> for seismic hazard analysis in Japan (derived from J-SHIS)
-***************************************
 
-  This tool is intended for the reading and querying the SQLite 
+SQL Query Tool for V<sub>S30</sub> for seismic hazard analysis in Japan (derived from J-SHIS)
+
+---
+
+This tool is intended for the reading and querying the SQLite 
 database with a processed subset of the J-SHIS seismic hazard data (National
 Research Institute for Earth Science and Disaster Resilience, NIED). It is 
 specifically designed as a computational tool for high-performance spatial 
 queries in seismic hazard and risk analysis and site effect modeling.
 
-1 DATABASE
-===================
+## 1 TARGET DATABASE
 
-  Hallo, M. (2026). Research Dataset: Optimized Site Parameters (Vs30) 
-for Seismic Hazard Analysis in Japan (derived from J-SHIS) [Data set]. 
-Zenodo. [https://doi.org/10.5281/zenodo.19379171](https://doi.org/10.5281/zenodo.19379171)
+  Hallo, M. (2026). Research Dataset: Optimized Site Parameters Vs30 for Seismic Hazard Analysis in Japan (derived from J-SHIS) (v1.0) [Dataset]. Zenodo. [https://doi.org/10.5281/zenodo.19379171](https://doi.org/10.5281/zenodo.19379171)
 
-2 TECHNICAL IMPLEMENTATION
-===================
+## 2 TECHNICAL IMPLEMENTATION
 
 [![PEP8](https://img.shields.io/badge/code%20style-pep8-orange.svg)](https://www.python.org/dev/peps/pep-0008/)
 
@@ -32,15 +30,13 @@ The official software version is archived on Zenodo:
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19386410.svg)](https://doi.org/10.5281/zenodo.19386410)
 
-3 PACKAGE CONTENT
-===================
+## 3 PACKAGE CONTENT
 
-  1. `jshis_sqlite_query.py` - Python script
-  2. `example_targets.txt` - Example of input text file with target locations
-  3. `requirements.txt` - pip requirements file for instalation of dependencies
+1. `jshis_sqlite_query.py` - Python script
+2. `example_targets.txt` - Example of input text file with target locations
+3. `requirements.txt` - pip requirements file for instalation of dependencies
 
-4 REQUIREMENTS
-===================
+## 4 REQUIREMENTS
 
   Python: Version 3.12 or higher
   
@@ -52,15 +48,13 @@ The official software version is archived on Zenodo:
 pip install -r requirements.txt
 ```
 
-5 USAGE
-===================
+## 5 USAGE
 
-  1. Prepare your `example_targets.txt` input file (longitude-latitude pairs)
-  2. Run the tool: `python jshis_sqlite_query.py`
-  3. Check `example_results_vs30.txt` for the output V<sub>S30</sub>
+1. Prepare your `example_targets.txt` input file (longitude-latitude pairs)
+2. Run the tool: `python jshis_sqlite_query.py`
+3. Check `example_results_vs30.txt` for the output V<sub>S30</sub>
 
-6 EXAMPLE OUTPUT
-===================
+## 6 EXAMPLE OUTPUT
 
 This tool extracts site-specific V<sub>S30</sub> for a set of target Longitude-Latitude 
 pairs from a SQLite database for Japan. Results are automatically saved to a 
@@ -76,8 +70,7 @@ formatted text file.
 136.2133 36.0639 136.2148 36.0640 166.8 2.1073 0.136
 ```
 
-7 COPYRIGHT
-===================
+## 7 COPYRIGHT
 
 Copyright (C) 2026 Kyoto University
 
@@ -92,5 +85,15 @@ This code is distributed in the hope that it will be useful, but WITHOUT
 ANY WARRANTY. We would like to kindly ask you to acknowledge the authors
 and don't remove their names from the code.
 
-You should have received copy of the GNU General Public License along
+You should have received a copy of the GNU General Public License along
 with this program. If not, see <http://www.gnu.org/licenses/>.
+
+## 8 CITE AS
+
+If you use this tools suite, please cite both the original database and the software as follows:
+
+### For the database:
+> Hallo, M. (2026). Research Dataset: Optimized Site Parameters Vs30 for Seismic Hazard Analysis in Japan (derived from J-SHIS) (v1.0) [Dataset]. Zenodo. [https://doi.org/10.5281/zenodo.19379171](https://doi.org/10.5281/zenodo.19379171)
+
+### For the specific software version:
+> Hallo, M. (2026). SQL Query Tool for Vs30 data in Japan (v1.2.3) [Software]. Zenodo. [https://doi.org/10.5281/zenodo.19386410](https://doi.org/10.5281/zenodo.19386410)
