@@ -7,7 +7,7 @@ SQL Query Tool for V<sub>S30</sub> for seismic hazard analysis in Japan (derived
 [![SOFTWARE](https://img.shields.io/badge/SOFTWARE-10.5281%2Fzenodo.19386410-%23007EC6?style=flat)](https://doi.org/10.5281/zenodo.19386410)
 
 ![Python](https://img.shields.io/badge/Python-%233776AB?style=flat&logo=python&logoColor=white)
-[![PEP8](https://img.shields.io/badge/code%20style-pep8-brightgreen?style=flat&logo=python&logoColor=white)](https://www.python.org/dev/peps/pep-0008/)
+[![PEP8](https://img.shields.io/badge/code%20style-pep8-brightgreen?style=flat&labelColor=%233776AB)](https://www.python.org/dev/peps/pep-0008/)
 ![SQLite](https://img.shields.io/badge/SQLite-%23003B57?style=flat&logo=sqlite&logoColor=white)
 
 ---
