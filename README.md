@@ -2,6 +2,13 @@
 
 SQL Query Tool for V<sub>S30</sub> for seismic hazard analysis in Japan (derived from J-SHIS)
 
+<a href="#cite"><img src="https://img.shields.io/badge/CITE%20AS-grey?style=flat" alt="Cite As"></a>
+[![DATABASE](https://img.shields.io/badge/DATABASE-10.5281%2Fzenodo.19379171-%23007EC6?style=flat)](https://doi.org/10.5281/zenodo.19379171)
+[![SOFTWARE](https://img.shields.io/badge/SOFTWARE-10.5281%2Fzenodo.19386410-%23007EC6?style=flat)](https://doi.org/10.5281/zenodo.19386410)
+
+![Python](https://img.shields.io/badge/Python-%233776AB?style=flat&logo=python&logoColor=white)
+[![PEP8](https://img.shields.io/badge/code%20style-pep8-brightgreen?style=flat)](https://www.python.org/dev/peps/pep-0008/)
+
 ---
 
 This tool is intended for the reading and querying the SQLite 
@@ -16,8 +23,6 @@ queries in seismic hazard and risk analysis and site effect modeling.
 
 ## 2 TECHNICAL IMPLEMENTATION
 
-[![PEP8](https://img.shields.io/badge/code%20style-pep8-orange.svg)](https://www.python.org/dev/peps/pep-0008/)
-
 Python 3, SQLite, SQL engine, Automatic database download, Coordinate-based indexing
 
 *   **Zero-Configuration:** The script automatically resolves the DOI, downloads the latest SQLite database from Zenodo, and stores it locally.
@@ -25,10 +30,6 @@ Python 3, SQLite, SQL engine, Automatic database download, Coordinate-based inde
 *   **Geospatial Precision:** Performs automatic UTM projection estimation to calculate exact metric distances (km) between targets and grid points.
 *   **Batch Processing:** Supports automated processing of target locations from text files.
 *   **Professional Output:** Generates clean, fixed-width formatted reports with metadata and provenance tracking.
-
-The official software version is archived on Zenodo:
-
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19386410.svg)](https://doi.org/10.5281/zenodo.19386410)
 
 ## 3 PACKAGE CONTENT
 
@@ -88,6 +89,7 @@ and don't remove their names from the code.
 You should have received a copy of the GNU General Public License along
 with this program. If not, see <http://www.gnu.org/licenses/>.
 
+<a name="cite"></a>
 ## 8 CITE AS
 
 If you use this tools suite, please cite both the original database and the software as follows:
