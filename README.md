@@ -1,6 +1,6 @@
 # SQL Query Tool for V<sub>S30</sub> data in Japan
 
-SQL Query Tool for V<sub>S30</sub> for seismic hazard analysis in Japan (derived from J-SHIS)
+SQL Query Tool for V<sub>S30</sub> for seismic hazard analysis in Japan (derived from J-SHIS).
 
 <a href="#cite"><img src="https://img.shields.io/badge/CITE%20AS-grey?style=flat" alt="Cite As"></a>
 [![DATABASE](https://img.shields.io/badge/DATABASE-10.5281%2Fzenodo.19379171-%23007EC6?style=flat)](https://doi.org/10.5281/zenodo.19379171)
