@@ -53,7 +53,7 @@ pip install -r requirements.txt
 ## 5 USAGE
 
 1. Prepare your `example_targets.txt` input file (longitude-latitude pairs)
-2. Run the tool: `python jshis_sqlite_query.py`
+2. Run the tool: `python3 jshis_sqlite_query.py`
 3. Check `example_results_vs30.txt` for the output V<sub>S30</sub>
 
 ## 6 EXAMPLE OUTPUT
