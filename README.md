@@ -99,4 +99,4 @@ If you use this tools suite, please cite both the original database and the soft
 > Hallo, M. (2026). Research Dataset: Optimized Site Parameters Vs30 for Seismic Hazard Analysis in Japan (derived from J-SHIS) (v1.0) [Dataset]. Zenodo. [https://doi.org/10.5281/zenodo.19379171](https://doi.org/10.5281/zenodo.19379171)
 
 ### For the specific software version:
-> Hallo, M. (2026). SQL Query Tool for Vs30 data in Japan (v1.2.3) [Software]. Zenodo. [https://doi.org/10.5281/zenodo.19386410](https://doi.org/10.5281/zenodo.19386410)
+> Hallo, M. (2026). SQL Query Tool for Vs30 data in Japan (v1.2.4) [Software]. Zenodo. [https://doi.org/10.5281/zenodo.19386410](https://doi.org/10.5281/zenodo.19386410)
