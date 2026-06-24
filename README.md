@@ -98,5 +98,12 @@ If you use this tools suite, please cite both the original database and the soft
 ### For the database:
 > Hallo, M. (2026). Research Dataset: Optimized Site Parameters Vs30 for Seismic Hazard Analysis in Japan (derived from J-SHIS) (v1.0) [Dataset]. Zenodo. [https://doi.org/10.5281/zenodo.19379171](https://doi.org/10.5281/zenodo.19379171)
 
+### For the source data:
+> Wakamatsu, K., Matsuoka, M. (2013). Nationwide 7.5-arc-second Japan engineering geomorphologic classification map and Vs30 zoning. Journal of Disaster Research 8(5), 904–911. [https://doi.org/10.20965/jdr.2013.p0904](https://doi.org/10.20965/jdr.2013.p0904)
+
+> Wakamatsu, K., Matsuoka, M. (2020). Update of the nationwide 7.5-arc-second Japan engineering geomorphologic classification map and Vs30 zoning. Bulletin of Japan Association for Earthquake Engineering 40, 24–27 (in Japanese).
+
+> Fujimoto, K., Midorikawa, S. (2006). Relationship between average shear-wave velocity and site amplification inferred from strong motion records at nearby station pairs. Journal of Japan Association for Earthquake Engineering 6(1), 11–22 (in Japanese). [https://doi.org/10.5610/jaee.6.11](https://doi.org/10.5610/jaee.6.11)
+
 ### For the specific software version:
 > Hallo, M. (2026). SQL Query Tool for Vs30 data in Japan (v1.2.4) [Software]. Zenodo. [https://doi.org/10.5281/zenodo.19386410](https://doi.org/10.5281/zenodo.19386410)
